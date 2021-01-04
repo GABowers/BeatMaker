@@ -1,0 +1,28 @@
+﻿<Window x:Class="BeatMaker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BeatMaker"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Content="Find Song" Grid.Column="0" Grid.Row="0" Name="find" Click="find_Click"/>
+        <TextBlock TextWrapping="WrapWithOverflow" Grid.Row="0" Grid.Column="1" Name="locationField"/>
+        <TextBlock TextWrapping="WrapWithOverflow" Text="Play song after 5 second countdown. The text field below will be given focus." Grid.Column="0" Grid.Row="1"/>
+        <Button Content="Play" Grid.Column="1" Grid.Row="1" Click="Button_Click" />
+        <TextBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Name="input" TextChanged="input_TextChanged"/>
+    </Grid>
+</Window>

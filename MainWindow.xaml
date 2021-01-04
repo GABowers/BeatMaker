@@ -12,17 +12,18 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="50"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Button Content="Find Song" Grid.Column="0" Grid.Row="0" Name="find" Click="find_Click"/>
         <TextBlock TextWrapping="WrapWithOverflow" Grid.Row="0" Grid.Column="1" Name="locationField"/>
-        <TextBlock TextWrapping="WrapWithOverflow" Text="Play song after 5 second countdown. The text field below will be given focus." Grid.Column="0" Grid.Row="1"/>
+        <TextBlock TextWrapping="WrapWithOverflow" Text="Play song after 5 second countdown. The text field below will be given focus. Type keys to see time elapsed since the start of the song." Grid.Column="0" Grid.Row="1"/>
         <Button Content="Play" Grid.Column="1" Grid.Row="1" Click="Button_Click" />
-        <TextBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Name="input" TextChanged="input_TextChanged"/>
+        <TextBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Name="input" KeyDown="input_KeyDown" KeyUp="input_KeyUp"/>
+        <ScrollViewer Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+            <TextBlock Name="output" TextWrapping="WrapWithOverflow"/>
+        </ScrollViewer>
     </Grid>
 </Window>
